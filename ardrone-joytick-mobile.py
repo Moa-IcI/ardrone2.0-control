@@ -1,3 +1,5 @@
+#Copyright (C) 2024  Moa-IcI
+####THIS IS THE VERSION INTENDED FOR MOBILE USE, REFER TO THE README FILE FOR EXECUTION ON MOBILE DEVICES####
 import tkinter as tk
 import socket
 import time
