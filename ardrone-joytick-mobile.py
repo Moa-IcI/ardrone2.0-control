@@ -117,11 +117,10 @@ def on_joystick_release(event, joystick, knob, center):
 # GUI Setup
 root = tk.Tk()
 root.title("Drone Controller")
-#root.geometry("700x400")
 root.configure(bg="black")
 
 # Stop button at the top
-stop_button = tk.Label(root, text="STOP", bg="red", fg="white", font=("Arial", 40, "bold"), width=10, height=2)
+stop_button = tk.Label(root, text="STOP", bg="red", fg="white", font=("Arial", 30, "bold"), width=10, height=2)
 stop_button.pack(pady=10)
 stop_button.bind("<Button-1>", lambda event: emergency_stop())
 
@@ -130,7 +129,7 @@ control_frame = tk.Frame(root, bg="black")
 control_frame.pack(pady=10)
 
 # Joystick for altitude and rotation on the left
-canvas2_width, canvas2_height = 300, 300
+canvas2_width, canvas2_height = 200, 200
 canvas2 = tk.Canvas(control_frame, width=canvas2_width, height=canvas2_height, bg="gray")
 canvas2.pack(side=tk.LEFT)
 
@@ -151,16 +150,16 @@ button_frame = tk.Frame(control_frame, bg="black")
 button_frame.pack(side=tk.LEFT, padx=(10, 0))
 
 # Takeoff and landing buttons
-takeoff_button = tk.Label(button_frame, text="Takeoff", bg="blue", fg="white", font=("Arial", 18, "bold"), width=15, height=4)
+takeoff_button = tk.Label(button_frame, text="Takeoff", bg="blue", fg="white", font=("Arial", 18, "bold"), width=7, height=4)
 takeoff_button.pack(side=tk.LEFT)
 takeoff_button.bind("<Button-1>", lambda event: takeoff_drone())
 
-landing_button = tk.Label(button_frame, text="Land", bg="green", fg="white", font=("Arial", 18, "bold"), width=15, height=4)
+landing_button = tk.Label(button_frame, text="Land", bg="green", fg="white", font=("Arial", 18, "bold"), width=7, height=4)
 landing_button.pack(side=tk.LEFT, padx=(10, 10))
 landing_button.bind("<Button-1>", lambda event: land())
 
 # Joystick for XY movement on the right
-canvas_width, canvas_height = 300, 300
+canvas_width, canvas_height = 200, 200
 canvas = tk.Canvas(control_frame, width=canvas_width, height=canvas_height, bg="gray")
 canvas.pack(side=tk.LEFT)
 
