@@ -1,4 +1,4 @@
-# Ardrone 2.0 Control
+# Ardrone 2.0 Control: A Python app for mobile and desktop drone control
 
 With this code you can control the *AR Drone 2.0* with your computer or phone using [PyDroid](https://play.google.com/store/apps/details?id=ru.iiec.pydroid) (recommended).  
 
